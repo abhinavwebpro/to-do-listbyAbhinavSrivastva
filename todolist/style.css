@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: Arial;
+    font-size: 16px;
+    margin: 0;
+    background: rgb(177, 175, 35);
+    min-height: 100vh;
+}
+
+.todo_list {
+    width: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-bottom: 10px solid #031982;
+    border-radius: 0 0 10px 10px;
+}
+
+.t1-header {
+    padding: 10px;
+    background: #031982;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+.t1-header h2 {
+    margin: 0;
+
+}
+
+#clearAll {
+    border: 0;
+    font-size: 16px;
+    cursor: pointer;
+    background: #c8e5f0;
+    color: #373737;
+    border-radius: 5px;
+}
+
+.new-list-row {
+    display: flex;
+    border-bottom: 2px solid #031982;
+    background: #fff;
+}
+
+.new-list-row input {
+    width: calc(100% - 50px);
+    height: 50px;
+    padding: 1px;
+    line-height: 20px;
+    font-size: 15px;
+    font-family: arial;
+    border: 0;
+    outline: 0 !important;
+}
+
+.new-list-row button {
+    width: 42px;
+    height: 42px;
+    margin: 4px;
+    border: 0;
+    font-size: 40px;
+    line-height: 40px;
+    cursor: pointer;
+    color: #000000;
+    background: #c8e5f0;
+    border-radius: 5px;
+}
+
+#allList {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    max-height: 50vh;
+    overflow: auto;
+}
+
+#allList li {
+    background: #ffffff;
+    color: #0e0e0e;
+    position: relative;
+    border-bottom: 4px solid #031982;
+    padding: 10px 60px 10px 15px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#allList li strong {
+    display: block;
+}
+
+#allList li span {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: url(images.png/delete.png) no-repeat center center;
+    background-size: 60%;
+    right: 5px;
+    top: 50%;
+    margin-top: -15px;
+    cursor: pointer;
+    background-color: red;
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 0.3 ease-out;
+}
+
+#allList li:hover span {
+    opacity: 1;
+}
